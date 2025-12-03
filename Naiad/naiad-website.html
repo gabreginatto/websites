@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAIAD | Promovendo água limpa com produtos químicos inteligentes</title>
+    <meta name="description" content="Naiad - Seu parceiro em produtos químicos para tratamento de água. Soluções químicas industriais com foco nas demandas de nossos clientes.">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           NAIAD DESIGN SYSTEM
+           Brand Colors & Variables
+        ============================================ */
+        :root {
+            /* Primary Colors - Ocean Blues */
+            --naiad-ocean: #2F79B7;
+            --naiad-azure: #3DAAD0;
+            --naiad-marine: #2B89BE;
+            --naiad-deep: #2982B9;
+
+            /* Accent Colors */
+            --naiad-teal: #3D9EC8;
+            --naiad-vivid: #0052CC;
+            --naiad-glow: #00E676;
+            --naiad-forest: #004D40;
+
+            /* Neutral Colors */
+            --naiad-white: #FDFEFE;
+            --naiad-pearl: #F8FCFC;
+            --naiad-slate: #1A1A2E;
+            --naiad-mist: #E8F4F8;
+
+            /* Gradients */
+            --gradient-ocean: linear-gradient(135deg, var(--naiad-ocean) 0%, var(--naiad-azure) 100%);
+            --gradient-vivid: linear-gradient(135deg, var(--naiad-vivid) 0%, var(--naiad-deep) 100%);
+            --gradient-hero: linear-gradient(135deg, var(--naiad-ocean) 0%, var(--naiad-azure) 50%, var(--naiad-deep) 100%);
+            --gradient-performance: linear-gradient(90deg, var(--naiad-ocean) 0%, var(--naiad-azure) 50%, var(--naiad-glow) 100%);
+
+            /* Typography */
+            --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 24px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-ocean: 0 4px 20px rgba(47, 121, 183, 0.3);
+            --shadow-glow: 0 4px 20px rgba(0, 230, 118, 0.3);
+
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-base: 300ms ease;
+            --transition-slow: 500ms ease;
+            --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* ============================================
+           RESET & BASE STYLES
+        ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--naiad-slate);
+            background-color: var(--naiad-white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+        ============================================ */
+        .display {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h1, .h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        h2, .h2 {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        h3, .h3 {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .body-lg {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        .caption {
+            font-size: 0.875rem;
+            color: #64748B;
+        }
+
+        /* ============================================
+           LAYOUT
+        ============================================ */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .section {
+            padding: var(--space-4xl) 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--space-xl);
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        @media (max-width: 1024px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        }
+
+        /* ============================================
+           ANIMATED BACKGROUND - WATER WAVES
+        ============================================ */
+        .water-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .water-bg::before,
+        .water-bg::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(ellipse at center, rgba(61, 170, 208, 0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .water-bg::after {
+            background: radial-gradient(ellipse at center, rgba(47, 121, 183, 0.06) 0%, transparent 60%);
+            animation-delay: -10s;
+            animation-duration: 25s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(2%, 2%) rotate(5deg); }
+            50% { transform: translate(-1%, 3%) rotate(-3deg); }
+            75% { transform: translate(-2%, -1%) rotate(2deg); }
+        }
+
+        /* Bubble particles */
+        .bubbles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 30% 30%, rgba(61, 170, 208, 0.2), rgba(47, 121, 183, 0.1));
+            border-radius: 50%;
+            animation: rise 15s infinite ease-in;
+            opacity: 0;
+        }
+
+        .bubble:nth-child(1) { left: 10%; animation-duration: 18s; animation-delay: 0s; width: 30px; height: 30px; }
+        .bubble:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; width: 20px; height: 20px; }
+        .bubble:nth-child(3) { left: 35%; animation-duration: 20s; animation-delay: 4s; width: 50px; height: 50px; }
+        .bubble:nth-child(4) { left: 50%; animation-duration: 17s; animation-delay: 1s; width: 25px; height: 25px; }
+        .bubble:nth-child(5) { left: 65%; animation-duration: 22s; animation-delay: 3s; width: 35px; height: 35px; }
+        .bubble:nth-child(6) { left: 80%; animation-duration: 16s; animation-delay: 5s; width: 45px; height: 45px; }
+        .bubble:nth-child(7) { left: 90%; animation-duration: 19s; animation-delay: 2.5s; width: 28px; height: 28px; }
+
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                opacity: 0;
+                transform: translateX(0) scale(0.8);
+            }
+            10% {
+                opacity: 0.6;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                bottom: 110%;
+                opacity: 0;
+                transform: translateX(30px) scale(1);
+            }
+        }
+
+        /* ============================================
+           NAVIGATION
+        ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: var(--space-md) 0;
+            transition: all var(--transition-base);
+        }
+
+        .nav.scrolled {
+            background: rgba(253, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px rgba(47, 121, 183, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            height: 48px;
+            width: auto;
+            transition: transform var(--transition-base);
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.02);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--naiad-slate);
+            position: relative;
+            padding: var(--space-xs) 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-ocean);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--naiad-ocean);
+        }
+
+        .nav-cta {
+            padding: var(--space-sm) var(--space-lg);
+            background: var(--gradient-ocean);
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-ocean);
+            transition: all var(--transition-base);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(47, 121, 183, 0.4);
+        }
+
+        /* Mobile menu button */
+        .nav-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: var(--space-sm);
+        }
+
+        .nav-menu-btn span {
+            width: 24px;
+            height: 2px;
+            background: var(--naiad-ocean);
+            transition: all var(--transition-base);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .nav-menu-btn {
+                display: flex;
+            }
+        }
+
+        /* ============================================
+           HERO SECTION
+        ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(61, 170, 208, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(47, 121, 183, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(0, 230, 118, 0.03) 0%, transparent 70%),
+                var(--naiad-pearl);
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .hero-wave svg {
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            height: 100%;
+            animation: wave 15s linear infinite;
+        }
+
+        .hero-wave svg:nth-child(2) {
+            opacity: 0.5;
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-xs) var(--space-md);
+            background: rgba(47, 121, 183, 0.1);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--naiad-ocean);
+            margin-bottom: var(--space-lg);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--naiad-glow);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .hero-title {
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-lg);
+            animation: fadeInUp 0.8s ease-out 0.1s backwards;
+        }
+
+        .hero-title .highlight {
+            background: var(--gradient-performance);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: #475569;
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        @media (max-width: 968px) {
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        @media (max-width: 968px) {
+            .hero-cta {
+                justify-content: center;
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease-out 0.4s backwards;
+        }
+
+        .hero-visual-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-performance);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--naiad-ocean);
+            line-height: 1;
+        }
+
+        .hero-stat-value .accent {
+            color: var(--naiad-glow);
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            color: #64748B;
+            margin-top: var(--space-xs);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ============================================
+           BUTTONS
+        ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-xl);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-ocean);
+            color: white;
+            box-shadow: var(--shadow-ocean);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(47, 121, 183, 0.4);
+        }
+
+        .btn-glow {
+            background: var(--naiad-glow);
+            color: var(--naiad-slate);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 230, 118, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--naiad-ocean);
+            border: 2px solid var(--naiad-ocean);
+        }
+
+        .btn-outline:hover {
+            background: var(--naiad-ocean);
+            color: white;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+        ============================================ */
+        .about {
+            background: var(--naiad-white);
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        @media (max-width: 968px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            background: var(--gradient-vivid);
+            padding: var(--space-3xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .about-image-wrapper img {
+            filter: brightness(0) invert(1);
+            height: 100px;
+            width: auto;
+        }
+
+        .about-floating-card {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .about-floating-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--naiad-glow);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .about-floating-text {
+            font-weight: 600;
+            color: var(--naiad-slate);
+        }
+
+        .about-floating-subtext {
+            font-size: 0.85rem;
+            color: #64748B;
+        }
+
+        .about-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--naiad-azure);
+            margin-bottom: var(--space-md);
+        }
+
+        .about-title {
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-lg);
+        }
+
+        .about-description {
+            color: #475569;
+            margin-bottom: var(--space-lg);
+        }
+
+        /* ============================================
+           SOLUTIONS SECTION
+        ============================================ */
+        .solutions {
+            background: var(--naiad-pearl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solutions::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(47, 121, 183, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(61, 170, 208, 0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .solutions-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto var(--space-3xl);
+        }
+
+        .solutions-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--naiad-azure);
+            margin-bottom: var(--space-md);
+        }
+
+        .solutions-title {
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-md);
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+
+        @media (max-width: 968px) {
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--transition-base);
+            border: 1px solid rgba(61, 170, 208, 0.1);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-ocean);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .solution-card:hover::before {
+            opacity: 1;
+        }
+
+        .solution-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient-performance);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: var(--space-md);
+        }
+
+        .solution-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-ocean);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .solution-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-sm);
+        }
+
+        .solution-description {
+            color: #64748B;
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .solution-link {
+            color: var(--naiad-ocean);
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .solution-link:hover {
+            color: var(--naiad-azure);
+        }
+
+        /* ============================================
+           DIFFERENTIALS SECTION
+        ============================================ */
+        .differentials {
+            background: var(--naiad-white);
+            position: relative;
+        }
+
+        .differentials-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto var(--space-3xl);
+        }
+
+        .differentials-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--naiad-azure);
+            margin-bottom: var(--space-md);
+        }
+
+        .differentials-title {
+            color: var(--naiad-slate);
+        }
+
+        .differentials-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-xl);
+        }
+
+        @media (max-width: 1024px) {
+            .differentials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .differentials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .differential-card {
+            text-align: center;
+            padding: var(--space-xl);
+            background: var(--naiad-pearl);
+            border-radius: var(--radius-2xl);
+            transition: all var(--transition-base);
+            border: 1px solid rgba(61, 170, 208, 0.1);
+        }
+
+        .differential-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            background: white;
+        }
+
+        .differential-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-ocean);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-size: 1.75rem;
+            color: white;
+        }
+
+        .differential-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-sm);
+        }
+
+        .differential-description {
+            color: #64748B;
+            font-size: 0.9rem;
+        }
+
+        /* ============================================
+           CONTACT SECTION
+        ============================================ */
+        .contact {
+            background: var(--naiad-pearl);
+            position: relative;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3xl);
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info {
+            padding-right: var(--space-2xl);
+        }
+
+        .contact-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--naiad-azure);
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-title {
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-lg);
+        }
+
+        .contact-description {
+            color: #475569;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .contact-email-link {
+            color: var(--naiad-ocean);
+            font-weight: 500;
+        }
+
+        .contact-email-link:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--naiad-slate);
+            margin-bottom: var(--space-sm);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: var(--space-md);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-fast);
+            background: var(--naiad-white);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--naiad-azure);
+            box-shadow: 0 0 0 3px rgba(61, 170, 208, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        .footer {
+            background: var(--naiad-slate);
+            color: white;
+            padding: var(--space-3xl) 0 var(--space-xl);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-logo {
+            height: 56px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            margin-bottom: var(--space-xl);
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        /* ============================================
+           SCROLL ANIMATIONS
+        ============================================ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.delay-2 { transition-delay: 0.2s; }
+        .animate-on-scroll.delay-3 { transition-delay: 0.3s; }
+        .animate-on-scroll.delay-4 { transition-delay: 0.4s; }
+
+        /* ============================================
+           UTILITY CLASSES
+        ============================================ */
+        .text-center { text-align: center; }
+        .text-ocean { color: var(--naiad-ocean); }
+        .text-glow { color: var(--naiad-glow); }
+
+        /* ============================================
+           RESPONSIVE UTILITIES
+        ============================================ */
+        @media (max-width: 768px) {
+            .section {
+                padding: var(--space-3xl) 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="water-bg"></div>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo-link">
+                <img src="naiad-bluelogo-optimized.svg" alt="Naiad" class="nav-logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#empresa" class="nav-link">EMPRESA</a></li>
+                <li><a href="#solucoes" class="nav-link">SOLUÇÕES</a></li>
+                <li><a href="#diferenciais" class="nav-link">DIFERENCIAIS</a></li>
+                <li><a href="#contato" class="nav-link">CONTATO</a></li>
+            </ul>
+            <a href="produtos.html" class="nav-cta">Nossos Produtos</a>
+            <button class="nav-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                <path fill="rgba(47, 121, 183, 0.1)" d="M0,50 C360,150 720,-50 1440,100 L1440,150 L0,150 Z"></path>
+            </svg>
+            <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+                <path fill="rgba(61, 170, 208, 0.08)" d="M0,100 C360,0 720,120 1440,50 L1440,150 L0,150 Z"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        Produtos Químicos Inteligentes
+                    </div>
+                    <h1 class="display hero-title">
+                        Seu parceiro em produtos químicos para <span class="highlight">tratamento de água.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Promovendo água limpa com soluções químicas industriais de alta qualidade,
+                        focadas nas demandas específicas de nossos clientes.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#empresa" class="btn btn-primary">
+                            SAIBA MAIS
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="produtos.html" class="btn btn-outline">Nossos Produtos</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-visual-card">
+                        <img src="naiad-bluelogo-optimized.svg" alt="Naiad Logo" style="height: 60px; margin: 0 auto var(--space-lg);">
+                        <p style="text-align: center; color: var(--naiad-ocean); font-weight: 600; font-size: 1.25rem; margin-bottom: var(--space-xs);">
+                            Qualidade e Eficiência
+                        </p>
+                        <p style="text-align: center; color: #64748B; font-size: 0.9rem;">
+                            Soluções químicas para tratamento de água
+                        </p>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <div class="hero-stat-value"><span class="accent">+</span>Anos</div>
+                                <div class="hero-stat-label">de Experiência</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-value"><span class="accent">Global</span></div>
+                                <div class="hero-stat-label">Presença</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-value"><span class="accent">100</span>%</div>
+                                <div class="hero-stat-label">Qualidade</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-value"><span class="accent">Custom</span></div>
+                                <div class="hero-stat-label">Soluções</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Sobre Nós -->
+    <section class="about section" id="empresa">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual animate-on-scroll">
+                    <div class="about-image-wrapper">
+                        <img src="naiad-bluelogo-optimized.svg" alt="Naiad">
+                    </div>
+                    <div class="about-floating-card">
+                        <div class="about-floating-icon">✓</div>
+                        <div>
+                            <div class="about-floating-text">Qualidade</div>
+                            <div class="about-floating-subtext">Alto Padrão</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll delay-2">
+                    <span class="about-label">Sobre Nós</span>
+                    <h2 class="h2 about-title">Somos especializados em soluções químicas industriais, com foco nas demandas de nossos clientes.</h2>
+                    <p class="about-description">
+                        Oferecemos produtos e tecnologias para atender às necessidades específicas dos mercados brasileiro, chinês e internacional.
+                    </p>
+                    <p class="about-description">
+                        Nossa missão é garantir o fornecimento confiável de produtos químicos de alto padrão, com excelente custo-benefício, sempre alinhados às necessidades dos nossos clientes e contribuindo para seu sucesso.
+                    </p>
+                    <p class="about-description">
+                        Guiados por qualidade, eficiência e sustentabilidade, nossas soluções abrangem uma ampla gama de aplicações, beneficiando diversas indústrias e o meio ambiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section - Nossas Soluções -->
+    <section class="solutions section" id="solucoes">
+        <div class="container">
+            <div class="solutions-header animate-on-scroll">
+                <span class="solutions-label">O que oferecemos</span>
+                <h2 class="h2 solutions-title">Nossas Soluções.</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card animate-on-scroll delay-1">
+                    <div class="solution-number">1</div>
+                    <div class="solution-icon">🧪</div>
+                    <h3 class="solution-title">Produtos Químicos Industriais</h3>
+                    <p class="solution-description">
+                        Desenvolvemos, buscamos e fornecemos uma ampla variedade de produtos químicos para uso municipal e industrial, atendendo setores como: alimentos, óleo e gás, têxtil, saneamento, papel e celulose, mineração, entre outros.
+                    </p>
+                    <a href="produtos.html" class="solution-link">
+                        Acesse nosso catálogo de produtos →
+                    </a>
+                </div>
+                <div class="solution-card animate-on-scroll delay-2">
+                    <div class="solution-number">2</div>
+                    <div class="solution-icon">🚚</div>
+                    <h3 class="solution-title">Atendimento e Logística</h3>
+                    <p class="solution-description">
+                        Nossa equipe oferece suporte personalizado, com acompanhamento próximo e soluções sob medida. Com uma rede logística robusta, garantimos entregas rápidas.
+                    </p>
+                </div>
+                <div class="solution-card animate-on-scroll delay-3">
+                    <div class="solution-number">3</div>
+                    <div class="solution-icon">✅</div>
+                    <h3 class="solution-title">Controle de Qualidade</h3>
+                    <p class="solution-description">
+                        Todos os nossos produtos seguem rigorosos padrões de qualidade e possuem as devidas certificações. Atuamos com laboratórios confiáveis para assegurar conformidade e transparência em todas as etapas do processo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section - Nossos Diferenciais -->
+    <section class="differentials section" id="diferenciais">
+        <div class="container">
+            <div class="differentials-header animate-on-scroll">
+                <span class="differentials-label">Por que nos escolher</span>
+                <h2 class="h2 differentials-title">Nossos Diferenciais.</h2>
+            </div>
+            <div class="differentials-grid">
+                <div class="differential-card animate-on-scroll delay-1">
+                    <div class="differential-icon">🌍</div>
+                    <h3 class="differential-title">Presença Global</h3>
+                    <p class="differential-description">
+                        Atuamos em diversos países, levando inovação e eficiência ao mercado.
+                    </p>
+                </div>
+                <div class="differential-card animate-on-scroll delay-2">
+                    <div class="differential-icon">📜</div>
+                    <h3 class="differential-title">Certificação</h3>
+                    <p class="differential-description">
+                        Produtos com padrões internacionais de segurança e desempenho.
+                    </p>
+                </div>
+                <div class="differential-card animate-on-scroll delay-3">
+                    <div class="differential-icon">⚙️</div>
+                    <h3 class="differential-title">Customização</h3>
+                    <p class="differential-description">
+                        Adaptamos nossos produtos às necessidades específicas de cada cliente.
+                    </p>
+                </div>
+                <div class="differential-card animate-on-scroll delay-4">
+                    <div class="differential-icon">📦</div>
+                    <h3 class="differential-title">Alta Capacidade de Entrega</h3>
+                    <p class="differential-description">
+                        Estrutura eficiente para atender demandas com agilidade e segurança.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Nosso Contato -->
+    <section class="contact section" id="contato">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <span class="contact-label">Fale Conosco</span>
+                    <h2 class="h2 contact-title">Nosso Contato.</h2>
+                    <p class="contact-description">
+                        Entre em contato conosco para conhecer mais sobre nossos serviços ou envie um email para <a href="mailto:contato@naiad.com.br" class="contact-email-link">contato@naiad.com.br</a>
+                    </p>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll delay-2">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nome</label>
+                            <input type="text" id="name" class="form-input" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Mensagem</label>
+                            <textarea id="message" class="form-textarea" placeholder="Digite sua mensagem aqui..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-glow form-submit">
+                            ENVIAR
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="naiad-bluelogo-optimized.svg" alt="Naiad" class="footer-logo">
+                <p class="footer-copyright">
+                    ©2025 - NAIAD. TODOS OS DIREITOS RESERVADOS.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const submitBtn = this.querySelector('.form-submit');
+                const originalText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    Enviado com sucesso!
+                `;
+                submitBtn.style.background = 'var(--naiad-glow)';
+
+                this.reset();
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            });
+        }
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const ripple = document.createElement('span');
+                ripple.style.cssText = `
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                    left: ${x}px;
+                    top: ${y}px;
+                    width: 100px;
+                    height: 100px;
+                    margin-left: -50px;
+                    margin-top: -50px;
+                `;
+
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add ripple animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

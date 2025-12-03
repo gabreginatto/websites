@@ -1,0 +1,380 @@
+/* Naiad Brand Design System */
+/* Based on official brand guidelines */
+
+:root {
+    /* Primary Colors - Blues */
+    --naiad-ocean: #2F79B7;       /* Cor principal da marca */
+    --naiad-azure: #3DAAD0;       /* Destaques e gradientes */
+    --naiad-marine: #2B89BE;      /* Textos em fundos claros */
+    --naiad-deep: #2982B9;        /* Variações de profundidade */
+
+    /* Accent Colors */
+    --naiad-teal: #3D9EC8;        /* Acentos e detalhes decorativos */
+    --naiad-vivid: #0052CC;       /* Fundos de apresentações */
+    --naiad-glow: #00E676;        /* Destaques de performance, CTAs */
+    --naiad-forest: #004D40;      /* Seções de contraste */
+
+    /* Neutral Colors */
+    --naiad-white: #FDFEFE;       /* Fundos principais */
+    --naiad-pearl: #F8FCFC;       /* Fundos secundários e cards */
+    --naiad-slate: #1A1A2E;       /* Textos primários */
+    --naiad-mist: #E8F4F8;        /* Fundos suaves */
+
+    /* Gray Scale */
+    --naiad-gray-50: #F8FAFB;
+    --naiad-gray-100: #F1F5F9;
+    --naiad-gray-200: #E2E8F0;
+    --naiad-gray-300: #CBD5E1;
+    --naiad-gray-400: #94A3B8;
+    --naiad-gray-500: #64748B;
+    --naiad-gray-600: #475569;
+    --naiad-gray-700: #334155;
+    --naiad-gray-800: #1E293B;
+    --naiad-gray-900: #0F172A;
+
+    /* Semantic Colors */
+    --naiad-success: var(--naiad-glow);
+    --naiad-info: var(--naiad-azure);
+    --naiad-warning: #F59E0B;
+    --naiad-error: #EF4444;
+
+    /* Gradients */
+    --naiad-gradient-ocean: linear-gradient(90deg, var(--naiad-ocean) 0%, var(--naiad-azure) 100%);
+    --naiad-gradient-vivid: linear-gradient(135deg, var(--naiad-vivid) 0%, var(--naiad-deep) 100%);
+    --naiad-gradient-performance: linear-gradient(90deg, var(--naiad-ocean) 0%, var(--naiad-azure) 50%, var(--naiad-glow) 100%);
+    --naiad-gradient-hero: linear-gradient(135deg, var(--naiad-ocean) 0%, var(--naiad-azure) 50%, var(--naiad-deep) 100%);
+
+    /* Typography - Montserrat */
+    --naiad-font-display: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --naiad-font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Font Sizes */
+    --naiad-text-xs: 0.75rem;     /* 12px */
+    --naiad-text-sm: 0.875rem;    /* 14px */
+    --naiad-text-base: 1rem;      /* 16px */
+    --naiad-text-lg: 1.125rem;    /* 18px */
+    --naiad-text-xl: 1.375rem;    /* 22px */
+    --naiad-text-2xl: 1.75rem;    /* 28px */
+    --naiad-text-3xl: 2.25rem;    /* 36px */
+    --naiad-text-4xl: 3rem;       /* 48px - Display */
+
+    /* Font Weights */
+    --naiad-font-light: 300;
+    --naiad-font-normal: 400;
+    --naiad-font-medium: 500;
+    --naiad-font-semibold: 600;
+    --naiad-font-bold: 700;
+
+    /* Spacing */
+    --naiad-space-xs: 4px;
+    --naiad-space-sm: 8px;
+    --naiad-space-md: 16px;
+    --naiad-space-lg: 24px;
+    --naiad-space-xl: 32px;
+    --naiad-space-2xl: 48px;
+    --naiad-space-3xl: 64px;
+    --naiad-space-4xl: 96px;
+
+    /* Border Radius */
+    --naiad-radius-sm: 4px;
+    --naiad-radius-md: 8px;
+    --naiad-radius-lg: 12px;
+    --naiad-radius-xl: 16px;
+    --naiad-radius-2xl: 24px;
+    --naiad-radius-full: 9999px;
+
+    /* Shadows */
+    --naiad-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --naiad-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --naiad-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --naiad-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --naiad-shadow-ocean: 0 4px 14px 0 rgba(47, 121, 183, 0.25);
+    --naiad-shadow-glow: 0 4px 14px 0 rgba(0, 230, 118, 0.25);
+
+    /* Transitions */
+    --naiad-transition-fast: 150ms ease;
+    --naiad-transition-base: 300ms ease;
+    --naiad-transition-slow: 500ms ease;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--naiad-font-sans);
+    font-size: var(--naiad-text-base);
+    line-height: 1.6;
+    color: var(--naiad-slate);
+    background-color: var(--naiad-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Classes */
+.naiad-display {
+    font-family: var(--naiad-font-display);
+    font-size: var(--naiad-text-4xl);
+    font-weight: var(--naiad-font-light);
+    line-height: 1.1;
+    color: var(--naiad-ocean);
+}
+
+.naiad-heading-1 {
+    font-family: var(--naiad-font-display);
+    font-size: var(--naiad-text-3xl);
+    font-weight: var(--naiad-font-semibold);
+    line-height: 1.2;
+    color: var(--naiad-slate);
+}
+
+.naiad-heading-2 {
+    font-family: var(--naiad-font-display);
+    font-size: var(--naiad-text-2xl);
+    font-weight: var(--naiad-font-semibold);
+    line-height: 1.25;
+    color: var(--naiad-slate);
+}
+
+.naiad-heading-3 {
+    font-family: var(--naiad-font-display);
+    font-size: var(--naiad-text-xl);
+    font-weight: var(--naiad-font-medium);
+    line-height: 1.3;
+    color: var(--naiad-slate);
+}
+
+.naiad-body-lg {
+    font-size: var(--naiad-text-lg);
+    color: var(--naiad-gray-600);
+    line-height: 1.7;
+}
+
+.naiad-body {
+    font-size: var(--naiad-text-base);
+    color: var(--naiad-gray-600);
+    line-height: 1.7;
+}
+
+.naiad-caption {
+    font-size: var(--naiad-text-sm);
+    color: var(--naiad-gray-500);
+    line-height: 1.5;
+}
+
+/* Button Styles */
+.naiad-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--naiad-space-sm);
+    padding: var(--naiad-space-sm) var(--naiad-space-lg);
+    font-family: var(--naiad-font-sans);
+    font-size: var(--naiad-text-base);
+    font-weight: var(--naiad-font-medium);
+    border-radius: var(--naiad-radius-lg);
+    border: none;
+    cursor: pointer;
+    transition: all var(--naiad-transition-base);
+    text-decoration: none;
+}
+
+.naiad-btn-primary {
+    background: var(--naiad-gradient-ocean);
+    color: var(--naiad-white);
+    box-shadow: var(--naiad-shadow-ocean);
+}
+
+.naiad-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(47, 121, 183, 0.35);
+}
+
+.naiad-btn-glow {
+    background: var(--naiad-glow);
+    color: var(--naiad-slate);
+    box-shadow: var(--naiad-shadow-glow);
+}
+
+.naiad-btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.35);
+}
+
+.naiad-btn-vivid {
+    background: var(--naiad-vivid);
+    color: var(--naiad-white);
+}
+
+.naiad-btn-vivid:hover {
+    background: var(--naiad-ocean);
+}
+
+.naiad-btn-outline {
+    background: transparent;
+    color: var(--naiad-ocean);
+    border: 2px solid var(--naiad-ocean);
+}
+
+.naiad-btn-outline:hover {
+    background: var(--naiad-ocean);
+    color: var(--naiad-white);
+}
+
+/* Card Styles */
+.naiad-card {
+    background: var(--naiad-white);
+    border-radius: var(--naiad-radius-2xl);
+    padding: var(--naiad-space-xl);
+    box-shadow: var(--naiad-shadow-md);
+    transition: all var(--naiad-transition-base);
+    border: 1px solid var(--naiad-azure)/20;
+}
+
+.naiad-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--naiad-shadow-xl);
+}
+
+.naiad-card-pearl {
+    background: var(--naiad-pearl);
+    border: 1px solid var(--naiad-azure)/20;
+}
+
+.naiad-card-glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Container */
+.naiad-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--naiad-space-lg);
+}
+
+/* Section Styles */
+.naiad-section {
+    padding: var(--naiad-space-4xl) 0;
+}
+
+/* Input Styles */
+.naiad-input {
+    width: 100%;
+    padding: var(--naiad-space-sm) var(--naiad-space-md);
+    font-family: var(--naiad-font-sans);
+    font-size: var(--naiad-text-base);
+    border: 2px solid var(--naiad-gray-200);
+    border-radius: var(--naiad-radius-lg);
+    outline: none;
+    transition: all var(--naiad-transition-fast);
+}
+
+.naiad-input:focus {
+    border-color: var(--naiad-azure);
+    box-shadow: 0 0 0 3px rgba(61, 170, 208, 0.1);
+}
+
+/* Badge Styles */
+.naiad-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--naiad-space-xs) var(--naiad-space-sm);
+    font-size: var(--naiad-text-xs);
+    font-weight: var(--naiad-font-medium);
+    border-radius: var(--naiad-radius-full);
+}
+
+.naiad-badge-ocean {
+    background: rgba(47, 121, 183, 0.1);
+    color: var(--naiad-ocean);
+}
+
+.naiad-badge-glow {
+    background: rgba(0, 230, 118, 0.1);
+    color: var(--naiad-forest);
+}
+
+/* Water Background Effect */
+.naiad-bg-water {
+    background:
+        radial-gradient(ellipse at 20% 80%, rgba(61, 170, 208, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(47, 121, 183, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(0, 230, 118, 0.05) 0%, transparent 70%),
+        var(--naiad-pearl);
+}
+
+/* Gradient Text */
+.naiad-text-gradient-ocean {
+    background: var(--naiad-gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.naiad-text-gradient-performance {
+    background: var(--naiad-gradient-performance);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Tagline highlight */
+.naiad-tagline-glow {
+    color: var(--naiad-glow);
+    font-weight: var(--naiad-font-semibold);
+}
+
+/* Hero gradient background */
+.naiad-hero-gradient {
+    background: var(--naiad-gradient-hero);
+}
+
+/* Pillar cards (like the brand pillars) */
+.naiad-pillar-card {
+    background: var(--naiad-vivid);
+    color: var(--naiad-white);
+    padding: var(--naiad-space-xl);
+    border-radius: var(--naiad-radius-2xl);
+}
+
+.naiad-pillar-number {
+    color: var(--naiad-glow);
+    font-size: var(--naiad-text-3xl);
+    font-weight: var(--naiad-font-bold);
+}
+
+/* Links */
+.naiad-link {
+    color: var(--naiad-ocean);
+    text-decoration: none;
+    transition: color var(--naiad-transition-fast);
+}
+
+.naiad-link:hover {
+    color: var(--naiad-azure);
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.naiad-text-ocean { color: var(--naiad-ocean); }
+.naiad-text-azure { color: var(--naiad-azure); }
+.naiad-text-marine { color: var(--naiad-marine); }
+.naiad-text-glow { color: var(--naiad-glow); }
+.naiad-text-vivid { color: var(--naiad-vivid); }
+.naiad-text-slate { color: var(--naiad-slate); }
+
+.naiad-bg-ocean { background-color: var(--naiad-ocean); }
+.naiad-bg-azure { background-color: var(--naiad-azure); }
+.naiad-bg-vivid { background-color: var(--naiad-vivid); }
+.naiad-bg-glow { background-color: var(--naiad-glow); }
+.naiad-bg-pearl { background-color: var(--naiad-pearl); }
+.naiad-bg-mist { background-color: var(--naiad-mist); }
+.naiad-bg-slate { background-color: var(--naiad-slate); }
+.naiad-bg-forest { background-color: var(--naiad-forest); }

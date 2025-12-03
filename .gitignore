@@ -1,0 +1,27 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Playwright MCP screenshots (temporary/debug files)
+.playwright-mcp/
+
+# Claude local files
+.claude/
+
+# Methodology images (large presentation files, not brand assets)
+**/methodology_images/
+
+# Original source images (raw/unprocessed - large files)
+Akeso/original images/
+
+# Large PDFs (presentations, not brand assets)
+Naiad/Otimização_de_Custos_em_Tratamento_de_Água.pdf
+
+# Large raw logo files (keep optimized versions)
+Naiad/naiad logo.jpg
+Naiad/naiad_bluelogo.jpg

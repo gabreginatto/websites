@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naiad Brand Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="naiad-brand.css">
+    <style>
+        .brand-section {
+            padding: var(--naiad-space-3xl) 0;
+            border-bottom: 1px solid var(--naiad-gray-200);
+        }
+
+        .brand-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-family: var(--naiad-font-display);
+            font-size: var(--naiad-text-3xl);
+            font-weight: var(--naiad-font-semibold);
+            color: var(--naiad-ocean);
+            margin-bottom: var(--naiad-space-xl);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: var(--naiad-space-md);
+        }
+
+        .color-swatch {
+            border-radius: var(--naiad-radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--naiad-shadow-md);
+        }
+
+        .color-preview {
+            height: 100px;
+        }
+
+        .color-info {
+            padding: var(--naiad-space-md);
+            background: var(--naiad-white);
+        }
+
+        .color-name {
+            font-weight: var(--naiad-font-semibold);
+            font-size: var(--naiad-text-sm);
+            color: var(--naiad-slate);
+            margin-bottom: var(--naiad-space-xs);
+        }
+
+        .color-value {
+            font-family: monospace;
+            font-size: var(--naiad-text-xs);
+            color: var(--naiad-gray-500);
+        }
+
+        .color-usage {
+            font-size: var(--naiad-text-xs);
+            color: var(--naiad-gray-500);
+            margin-top: var(--naiad-space-sm);
+        }
+
+        .logo-display {
+            display: flex;
+            gap: var(--naiad-space-2xl);
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-item {
+            text-align: center;
+        }
+
+        .logo-item img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .logo-label {
+            margin-top: var(--naiad-space-sm);
+            font-size: var(--naiad-text-sm);
+            color: var(--naiad-gray-500);
+        }
+
+        .typography-sample {
+            margin-bottom: var(--naiad-space-lg);
+            padding: var(--naiad-space-lg);
+            background: var(--naiad-pearl);
+            border-radius: var(--naiad-radius-lg);
+        }
+
+        .typography-label {
+            font-size: var(--naiad-text-xs);
+            color: var(--naiad-gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--naiad-space-xs);
+        }
+
+        .component-demo {
+            display: flex;
+            gap: var(--naiad-space-md);
+            flex-wrap: wrap;
+            margin-bottom: var(--naiad-space-xl);
+        }
+
+        .gradient-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--naiad-space-md);
+        }
+
+        .gradient-item {
+            height: 80px;
+            border-radius: var(--naiad-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--naiad-font-medium);
+            box-shadow: var(--naiad-shadow-md);
+        }
+
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--naiad-space-md);
+        }
+
+        .tagline-display {
+            text-align: center;
+            padding: var(--naiad-space-3xl) 0;
+            border: 1px solid var(--naiad-azure);
+            border-left: none;
+            border-right: none;
+            margin: var(--naiad-space-xl) 0;
+        }
+
+        .tagline-display p {
+            font-size: var(--naiad-text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--naiad-azure);
+            margin-bottom: var(--naiad-space-md);
+        }
+
+        .tagline-display h2 {
+            font-size: var(--naiad-text-4xl);
+            font-weight: var(--naiad-font-light);
+            color: var(--naiad-ocean);
+        }
+
+        .tagline-display .glow {
+            font-weight: var(--naiad-font-semibold);
+            color: var(--naiad-glow);
+        }
+    </style>
+</head>
+<body class="naiad-bg-water">
+    <div class="naiad-container">
+        <!-- Header -->
+        <header class="brand-section" style="text-align: center; padding-top: var(--naiad-space-4xl);">
+            <div class="logo-display" style="margin-bottom: var(--naiad-space-xl);">
+                <img src="naiad-bluelogo-optimized.svg" alt="Naiad Logo" style="max-height: 80px;">
+            </div>
+            <h1 class="naiad-display">Brand Guidelines</h1>
+            <p class="naiad-body-lg" style="max-width: 700px; margin: var(--naiad-space-md) auto 0;">
+                Na mitologia grega, as Naiads eram ninfas que presidiam fontes, poços, nascentes e outros corpos de água doce. Nossa marca captura essa essência de pureza, fluidez e transformação.
+            </p>
+        </header>
+
+        <!-- Brand Essence -->
+        <section class="brand-section">
+            <h2 class="section-title">Essência da Marca</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--naiad-space-lg);">
+                <div class="naiad-card naiad-card-pearl">
+                    <div style="width: 48px; height: 48px; background: var(--naiad-ocean); border-radius: var(--naiad-radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: var(--naiad-space-md);">◊</div>
+                    <h3 class="naiad-heading-3" style="color: var(--naiad-ocean); margin-bottom: var(--naiad-space-sm);">Missão</h3>
+                    <p class="naiad-body">Garantir o fornecimento confiável de produtos químicos de alto padrão, com excelente custo-benefício, contribuindo para o sucesso dos nossos clientes.</p>
+                </div>
+                <div class="naiad-card naiad-card-pearl">
+                    <div style="width: 48px; height: 48px; background: var(--naiad-azure); border-radius: var(--naiad-radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: var(--naiad-space-md);">◎</div>
+                    <h3 class="naiad-heading-3" style="color: var(--naiad-ocean); margin-bottom: var(--naiad-space-sm);">Visão</h3>
+                    <p class="naiad-body">Ser referência global em soluções químicas industriais, levando inovação e eficiência para tratamento de água em todo o mundo.</p>
+                </div>
+                <div class="naiad-card naiad-card-pearl">
+                    <div style="width: 48px; height: 48px; background: var(--naiad-deep); border-radius: var(--naiad-radius-lg); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-bottom: var(--naiad-space-md);">✧</div>
+                    <h3 class="naiad-heading-3" style="color: var(--naiad-ocean); margin-bottom: var(--naiad-space-sm);">Valores</h3>
+                    <p class="naiad-body">Qualidade, eficiência, sustentabilidade, customização e compromisso com a excelência em cada solução entregue.</p>
+                </div>
+            </div>
+
+            <!-- Tagline -->
+            <div class="tagline-display">
+                <p>Tagline</p>
+                <h2>Qualidade que <span class="glow">transforma!</span></h2>
+            </div>
+
+            <!-- Pillars -->
+            <h3 class="naiad-heading-2" style="margin-bottom: var(--naiad-space-lg);">Pilares da Marca</h3>
+            <div class="pillar-grid">
+                <div class="naiad-pillar-card">
+                    <div class="naiad-pillar-number">01</div>
+                    <h4 style="font-weight: var(--naiad-font-semibold); margin-bottom: var(--naiad-space-xs);">Presença Global</h4>
+                    <p style="opacity: 0.7; font-size: var(--naiad-text-sm);">Atuação em diversos países</p>
+                </div>
+                <div class="naiad-pillar-card">
+                    <div class="naiad-pillar-number">02</div>
+                    <h4 style="font-weight: var(--naiad-font-semibold); margin-bottom: var(--naiad-space-xs);">Alta Capacidade</h4>
+                    <p style="opacity: 0.7; font-size: var(--naiad-text-sm);">+1.200.000 t/ano</p>
+                </div>
+                <div class="naiad-pillar-card">
+                    <div class="naiad-pillar-number">03</div>
+                    <h4 style="font-weight: var(--naiad-font-semibold); margin-bottom: var(--naiad-space-xs);">Customização</h4>
+                    <p style="opacity: 0.7; font-size: var(--naiad-text-sm);">Soluções sob medida</p>
+                </div>
+                <div class="naiad-pillar-card">
+                    <div class="naiad-pillar-number">04</div>
+                    <h4 style="font-weight: var(--naiad-font-semibold); margin-bottom: var(--naiad-space-xs);">Certificação</h4>
+                    <p style="opacity: 0.7; font-size: var(--naiad-text-sm);">Qualidade garantida</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors - Primary -->
+        <section class="brand-section">
+            <h2 class="section-title">Cores Primárias</h2>
+            <p class="naiad-body" style="margin-bottom: var(--naiad-space-lg);">As cores primárias representam a essência da água: profundidade, clareza e vida.</p>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #2F79B7;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Ocean</div>
+                        <div class="color-value">#2F79B7</div>
+                        <div class="color-usage">Cor principal da marca. Use em elementos primários.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #3DAAD0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Azure</div>
+                        <div class="color-value">#3DAAD0</div>
+                        <div class="color-usage">Destaques e gradientes. Representa fluidez.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #2B89BE;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Marine</div>
+                        <div class="color-value">#2B89BE</div>
+                        <div class="color-usage">Textos em fundos claros e elementos secundários.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #2982B9;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Deep</div>
+                        <div class="color-value">#2982B9</div>
+                        <div class="color-usage">Variações de profundidade e camadas visuais.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors - Accent -->
+        <section class="brand-section">
+            <h2 class="section-title">Cores de Destaque</h2>
+            <p class="naiad-body" style="margin-bottom: var(--naiad-space-lg);">Usadas para criar contraste e destacar informações importantes.</p>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #3D9EC8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Teal</div>
+                        <div class="color-value">#3D9EC8</div>
+                        <div class="color-usage">Acentos e detalhes decorativos.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #0052CC;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Vivid</div>
+                        <div class="color-value">#0052CC</div>
+                        <div class="color-usage">Fundos de apresentações e materiais institucionais.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #00E676;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Glow</div>
+                        <div class="color-value">#00E676</div>
+                        <div class="color-usage">Destaques de performance e CTAs de alta conversão.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #004D40;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Forest</div>
+                        <div class="color-value">#004D40</div>
+                        <div class="color-usage">Seções de contraste e dados técnicos.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors - Neutral -->
+        <section class="brand-section">
+            <h2 class="section-title">Cores Neutras</h2>
+            <p class="naiad-body" style="margin-bottom: var(--naiad-space-lg);">Base para layouts, garantindo legibilidade e equilíbrio visual.</p>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #FDFEFE; border: 1px solid #E2E8F0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad White</div>
+                        <div class="color-value">#FDFEFE</div>
+                        <div class="color-usage">Fundos principais e espaço negativo.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #F8FCFC;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Pearl</div>
+                        <div class="color-value">#F8FCFC</div>
+                        <div class="color-usage">Fundos secundários e cards.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #1A1A2E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Slate</div>
+                        <div class="color-value">#1A1A2E</div>
+                        <div class="color-usage">Textos primários e elementos escuros.</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #E8F4F8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Naiad Mist</div>
+                        <div class="color-value">#E8F4F8</div>
+                        <div class="color-usage">Fundos suaves e áreas de respiro.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gradients -->
+        <section class="brand-section">
+            <h2 class="section-title">Gradientes</h2>
+            <div class="gradient-demo">
+                <div class="gradient-item" style="background: linear-gradient(90deg, #2F79B7 0%, #3DAAD0 100%);">
+                    Ocean → Azure
+                </div>
+                <div class="gradient-item" style="background: linear-gradient(135deg, #0052CC 0%, #2982B9 100%);">
+                    Vivid → Deep
+                </div>
+                <div class="gradient-item" style="background: linear-gradient(90deg, #2F79B7 0%, #3DAAD0 50%, #00E676 100%);">
+                    Performance Gradient
+                </div>
+                <div class="gradient-item" style="background: linear-gradient(135deg, #2F79B7 0%, #3DAAD0 50%, #2982B9 100%);">
+                    Hero Gradient
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="brand-section">
+            <h2 class="section-title">Tipografia</h2>
+            <p class="naiad-body" style="margin-bottom: var(--naiad-space-lg);">A tipografia da Naiad comunica profissionalismo, clareza e modernidade. Usamos Montserrat em todas as aplicações.</p>
+
+            <div class="typography-sample">
+                <div class="typography-label">Display - Montserrat Light 48px</div>
+                <h1 class="naiad-display">Naiad</h1>
+            </div>
+
+            <div class="typography-sample">
+                <div class="typography-label">Heading 1 - Montserrat Semibold 36px</div>
+                <h1 class="naiad-heading-1">Qualidade que transforma</h1>
+            </div>
+
+            <div class="typography-sample">
+                <div class="typography-label">Heading 2 - Montserrat Semibold 28px</div>
+                <h2 class="naiad-heading-2">Nossos diferenciais</h2>
+            </div>
+
+            <div class="typography-sample">
+                <div class="typography-label">Heading 3 - Montserrat Medium 22px</div>
+                <h3 class="naiad-heading-3">Presença Global</h3>
+            </div>
+
+            <div class="typography-sample">
+                <div class="typography-label">Body Large - Montserrat Regular 18px</div>
+                <p class="naiad-body-lg">A Naiad é especializada em soluções químicas industriais.</p>
+            </div>
+
+            <div class="typography-sample">
+                <div class="typography-label">Body - Montserrat Regular 16px</div>
+                <p class="naiad-body">Oferecendo produtos e tecnologias desenvolvidos para atender às demandas específicas de cada cliente.</p>
+            </div>
+
+            <div class="typography-sample">
+                <div class="typography-label">Caption - Montserrat Regular 14px</div>
+                <p class="naiad-caption">www.naiad.com.br</p>
+            </div>
+        </section>
+
+        <!-- Components -->
+        <section class="brand-section">
+            <h2 class="section-title">Componentes</h2>
+
+            <h3 class="naiad-heading-3" style="margin-bottom: var(--naiad-space-md);">Botões</h3>
+            <div class="component-demo">
+                <button class="naiad-btn naiad-btn-primary">Primary Ocean</button>
+                <button class="naiad-btn naiad-btn-glow">Glow CTA</button>
+                <button class="naiad-btn naiad-btn-vivid">Vivid</button>
+                <button class="naiad-btn naiad-btn-outline">Outline</button>
+            </div>
+
+            <h3 class="naiad-heading-3" style="margin-bottom: var(--naiad-space-md);">Badges</h3>
+            <div class="component-demo">
+                <span class="naiad-badge naiad-badge-ocean">Ocean Badge</span>
+                <span class="naiad-badge naiad-badge-glow">Glow Badge</span>
+            </div>
+
+            <h3 class="naiad-heading-3" style="margin-bottom: var(--naiad-space-md);">Cards</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--naiad-space-lg);">
+                <div class="naiad-card">
+                    <h4 class="naiad-heading-3" style="margin-bottom: var(--naiad-space-sm);">Standard Card</h4>
+                    <p class="naiad-body">Um card limpo com sombra sutil e efeito hover.</p>
+                </div>
+                <div class="naiad-card naiad-card-pearl">
+                    <h4 class="naiad-heading-3" style="margin-bottom: var(--naiad-space-sm);">Pearl Card</h4>
+                    <p class="naiad-body">Card com fundo pearl para destacar conteúdo.</p>
+                </div>
+            </div>
+
+            <h3 class="naiad-heading-3" style="margin: var(--naiad-space-xl) 0 var(--naiad-space-md);">Input</h3>
+            <div style="max-width: 400px;">
+                <input type="text" class="naiad-input" placeholder="Digite seu email...">
+            </div>
+        </section>
+
+        <!-- Logo -->
+        <section class="brand-section">
+            <h2 class="section-title">Logotipo</h2>
+            <p class="naiad-body" style="margin-bottom: var(--naiad-space-xl);">O símbolo da Naiad representa uma gota d'água com ondas fluidas, simbolizando pureza, movimento e transformação.</p>
+
+            <div class="logo-display" style="padding: var(--naiad-space-3xl); background: var(--naiad-pearl); border-radius: var(--naiad-radius-2xl); margin-bottom: var(--naiad-space-xl);">
+                <img src="naiad-bluelogo-optimized.svg" alt="Naiad Logo" style="max-height: 100px;">
+            </div>
+
+            <h3 class="naiad-heading-3" style="margin-bottom: var(--naiad-space-lg);">Versões do Logotipo</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--naiad-space-lg);">
+                <div style="background: white; padding: var(--naiad-space-xl); border-radius: var(--naiad-radius-xl); text-align: center; border: 1px solid var(--naiad-gray-200);">
+                    <img src="naiad-bluelogo-optimized.svg" alt="Naiad Logo" style="height: 48px; margin-bottom: var(--naiad-space-sm);">
+                    <p class="naiad-caption">Principal - Horizontal</p>
+                </div>
+                <div style="background: #0052CC; padding: var(--naiad-space-xl); border-radius: var(--naiad-radius-xl); text-align: center;">
+                    <img src="naiad-bluelogo-optimized.svg" alt="Naiad Logo" style="height: 48px; margin-bottom: var(--naiad-space-sm); filter: brightness(0) invert(1);">
+                    <p style="color: rgba(255,255,255,0.7); font-size: var(--naiad-text-sm);">Versão Negativa</p>
+                </div>
+                <div style="background: #F1F5F9; padding: var(--naiad-space-xl); border-radius: var(--naiad-radius-xl); text-align: center;">
+                    <img src="naiad-bluelogo-optimized.svg" alt="Naiad Logo" style="height: 48px; margin-bottom: var(--naiad-space-sm); filter: grayscale(1);">
+                    <p class="naiad-caption">Monocromática</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: var(--naiad-space-3xl) 0;">
+            <p class="naiad-caption">
+                Naiad Brand Guide &copy; 2025 | Qualidade que transforma!
+            </p>
+        </footer>
+    </div>
+
+    <script src="naiad-brand.js"></script>
+</body>
+</html>

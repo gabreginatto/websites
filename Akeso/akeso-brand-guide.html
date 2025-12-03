@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akeso Medical Solutions - Brand Guidelines</title>
+    <link rel="stylesheet" href="akeso-brand.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--akeso-font-body);
+            background: var(--akeso-gray-50);
+            color: var(--akeso-gray-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--akeso-space-xl);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--akeso-primary) 0%, var(--akeso-secondary) 100%);
+            color: var(--akeso-white);
+            padding: var(--akeso-space-3xl) var(--akeso-space-xl);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: var(--akeso-font-bold);
+            margin-bottom: var(--akeso-space-sm);
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* Sections */
+        .section {
+            background: var(--akeso-white);
+            border-radius: var(--akeso-radius-xl);
+            padding: var(--akeso-space-2xl);
+            margin-bottom: var(--akeso-space-xl);
+            box-shadow: var(--akeso-shadow-md);
+        }
+
+        .section h2 {
+            color: var(--akeso-primary);
+            font-size: 1.5rem;
+            margin-bottom: var(--akeso-space-lg);
+            padding-bottom: var(--akeso-space-sm);
+            border-bottom: 3px solid var(--akeso-accent);
+        }
+
+        .section h3 {
+            color: var(--akeso-gray-700);
+            font-size: 1.1rem;
+            margin: var(--akeso-space-lg) 0 var(--akeso-space-md);
+        }
+
+        /* Logo Display */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--akeso-space-lg);
+        }
+
+        .logo-box {
+            padding: var(--akeso-space-2xl);
+            border-radius: var(--akeso-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box.light {
+            background: var(--akeso-gray-100);
+        }
+
+        .logo-box.dark {
+            background: var(--akeso-gray-900);
+        }
+
+        .logo-box img {
+            max-width: 280px;
+            height: auto;
+        }
+
+        .logo-label {
+            text-align: center;
+            margin-top: var(--akeso-space-sm);
+            font-size: 0.875rem;
+            color: var(--akeso-gray-500);
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--akeso-space-md);
+        }
+
+        .color-card {
+            border-radius: var(--akeso-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--akeso-shadow-sm);
+        }
+
+        .color-swatch {
+            height: 100px;
+        }
+
+        .color-info {
+            padding: var(--akeso-space-md);
+            background: var(--akeso-white);
+        }
+
+        .color-name {
+            font-weight: var(--akeso-font-semibold);
+            color: var(--akeso-gray-800);
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: var(--akeso-gray-500);
+        }
+
+        .color-var {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--akeso-gray-400);
+            margin-top: 4px;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: var(--akeso-gray-900);
+            color: var(--akeso-gray-100);
+            padding: var(--akeso-space-lg);
+            border-radius: var(--akeso-radius-md);
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .code-block .comment {
+            color: var(--akeso-gray-500);
+        }
+
+        .code-block .property {
+            color: var(--akeso-accent);
+        }
+
+        .code-block .value {
+            color: var(--akeso-highlight);
+        }
+
+        /* Button Examples */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--akeso-space-md);
+            margin-top: var(--akeso-space-md);
+        }
+
+        /* Asset Grid */
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--akeso-space-lg);
+        }
+
+        .asset-card {
+            background: var(--akeso-gray-50);
+            border-radius: var(--akeso-radius-lg);
+            padding: var(--akeso-space-lg);
+            text-align: center;
+        }
+
+        .asset-card img {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            margin-bottom: var(--akeso-space-md);
+        }
+
+        .asset-card h4 {
+            color: var(--akeso-gray-700);
+            font-size: 0.95rem;
+            margin-bottom: var(--akeso-space-xs);
+        }
+
+        .asset-card .filename {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--akeso-gray-400);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: var(--akeso-space-2xl);
+            color: var(--akeso-gray-500);
+            font-size: 0.875rem;
+        }
+
+        /* Copy button */
+        .copy-btn {
+            position: absolute;
+            top: var(--akeso-space-sm);
+            right: var(--akeso-space-sm);
+            background: var(--akeso-gray-700);
+            color: var(--akeso-white);
+            border: none;
+            padding: var(--akeso-space-xs) var(--akeso-space-sm);
+            border-radius: var(--akeso-radius-sm);
+            cursor: pointer;
+            font-size: 0.75rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--akeso-gray-600);
+        }
+
+        .code-wrapper {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="SVGs/akeso-logo-optimized.svg" alt="Akeso Medical Solutions" style="max-width: 300px; margin-bottom: 20px;">
+        <h1>Brand Guidelines</h1>
+        <p>Visual identity system for Akeso Medical Solutions</p>
+    </header>
+
+    <div class="container">
+        <!-- Logo Section -->
+        <section class="section">
+            <h2>Logo</h2>
+            <p style="margin-bottom: var(--akeso-space-lg); color: var(--akeso-gray-600);">
+                The Akeso logo should be used consistently across all materials. Ensure adequate clear space around the logo.
+            </p>
+
+            <h3>Primary Logo</h3>
+            <div class="logo-showcase">
+                <div>
+                    <div class="logo-box light">
+                        <img src="SVGs/akeso-logo-optimized.svg" alt="Akeso Logo on Light">
+                    </div>
+                    <p class="logo-label">On light background</p>
+                </div>
+                <div>
+                    <div class="logo-box dark">
+                        <img src="SVGs/akeso-logo-optimized.svg" alt="Akeso Logo on Dark">
+                    </div>
+                    <p class="logo-label">On dark background</p>
+                </div>
+            </div>
+
+            <h3>Logo Variations</h3>
+            <div class="asset-card" style="margin-top: var(--akeso-space-md);">
+                <img src="SVGs/akeso-logo-variations-optimized.svg" alt="Logo Variations" style="max-height: 300px;">
+            </div>
+
+            <h3>Brandmarks</h3>
+            <div class="asset-card" style="margin-top: var(--akeso-space-md);">
+                <img src="SVGs/akeso-brandmarks-optimized.svg" alt="Brandmarks" style="max-height: 250px;">
+            </div>
+        </section>
+
+        <!-- Colors Section -->
+        <section class="section">
+            <h2>Color Palette</h2>
+            <p style="margin-bottom: var(--akeso-space-lg); color: var(--akeso-gray-600);">
+                Our brand colors reflect trust, innovation, and care in healthcare.
+            </p>
+
+            <h3>Primary Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--akeso-primary);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Blue</div>
+                        <div class="color-hex">#2158AB</div>
+                        <div class="color-var">--akeso-primary</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--akeso-secondary);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Secondary Blue</div>
+                        <div class="color-hex">#2E75B2</div>
+                        <div class="color-var">--akeso-secondary</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--akeso-accent);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Accent Teal</div>
+                        <div class="color-hex">#42BAC7</div>
+                        <div class="color-var">--akeso-accent</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--akeso-highlight);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Highlight Cyan</div>
+                        <div class="color-hex">#4FCBCA</div>
+                        <div class="color-var">--akeso-highlight</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Full Palette Reference</h3>
+            <div class="asset-card" style="margin-top: var(--akeso-space-md);">
+                <img src="SVGs/akeso-color-palette-optimized.svg" alt="Color Palette" style="max-height: 400px;">
+            </div>
+        </section>
+
+        <!-- Usage Section -->
+        <section class="section">
+            <h2>Usage</h2>
+
+            <h3>CSS Variables</h3>
+            <p style="margin-bottom: var(--akeso-space-md); color: var(--akeso-gray-600);">
+                Include <code>akeso-brand.css</code> in your project to access all brand variables:
+            </p>
+            <div class="code-wrapper">
+                <pre class="code-block"><span class="comment">/* Link the stylesheet */</span>
+&lt;link rel="stylesheet" href="akeso-brand.css"&gt;
+
+<span class="comment">/* Use variables in your CSS */</span>
+.my-button {
+    <span class="property">background-color</span>: <span class="value">var(--akeso-primary)</span>;
+    <span class="property">color</span>: <span class="value">var(--akeso-white)</span>;
+    <span class="property">border-radius</span>: <span class="value">var(--akeso-radius-md)</span>;
+    <span class="property">padding</span>: <span class="value">var(--akeso-space-sm) var(--akeso-space-md)</span>;
+}</pre>
+            </div>
+
+            <h3>JavaScript / React</h3>
+            <p style="margin-bottom: var(--akeso-space-md); color: var(--akeso-gray-600);">
+                Import brand tokens from <code>akeso-brand.js</code>:
+            </p>
+            <div class="code-wrapper">
+                <pre class="code-block"><span class="comment">// Import brand tokens</span>
+import { colors, fonts, assets } from './akeso-brand.js'
+
+<span class="comment">// Use in your components</span>
+const Header = () =&gt; (
+    &lt;header style={{ backgroundColor: <span class="value">colors.primary</span> }}&gt;
+        &lt;img src={<span class="value">assets.logo</span>} alt="Akeso" /&gt;
+    &lt;/header&gt;
+)</pre>
+            </div>
+
+            <h3>Button Examples</h3>
+            <p style="margin-bottom: var(--akeso-space-md); color: var(--akeso-gray-600);">
+                Pre-built button classes using brand colors:
+            </p>
+            <div class="button-grid">
+                <button class="akeso-btn akeso-btn-primary">Primary Button</button>
+                <button class="akeso-btn akeso-btn-secondary">Secondary Button</button>
+                <button class="akeso-btn akeso-btn-outline">Outline Button</button>
+            </div>
+        </section>
+
+        <!-- Assets Section -->
+        <section class="section">
+            <h2>Product Assets</h2>
+            <p style="margin-bottom: var(--akeso-space-lg); color: var(--akeso-gray-600);">
+                Vectorized product images for use in marketing materials.
+            </p>
+
+            <div class="asset-grid">
+                <div class="asset-card">
+                    <img src="SVGs/akeso-products-optimized.svg" alt="Products Overview">
+                    <h4>Products Overview</h4>
+                    <span class="filename">akeso-products-optimized.svg</span>
+                </div>
+                <div class="asset-card">
+                    <img src="SVGs/akeso-syringe-product-optimized.svg" alt="Syringe Product">
+                    <h4>Syringe Product</h4>
+                    <span class="filename">akeso-syringe-product-optimized.svg</span>
+                </div>
+                <div class="asset-card">
+                    <img src="SVGs/akeso-syringe-package-optimized.svg" alt="Syringe Package">
+                    <h4>Syringe Package</h4>
+                    <span class="filename">akeso-syringe-package-optimized.svg</span>
+                </div>
+                <div class="asset-card">
+                    <img src="SVGs/akeso-hydrocolloid-optimized.svg" alt="Hydrocolloid">
+                    <h4>Hydrocolloid</h4>
+                    <span class="filename">akeso-hydrocolloid-optimized.svg</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mockups Section -->
+        <section class="section">
+            <h2>Brand Mockups</h2>
+            <div class="asset-card">
+                <img src="SVGs/akeso-brand-mockups-optimized.svg" alt="Brand Mockups" style="max-height: 500px;">
+                <h4>Brand Applications</h4>
+                <span class="filename">akeso-brand-mockups-optimized.svg</span>
+            </div>
+        </section>
+
+        <!-- Files Section -->
+        <section class="section">
+            <h2>File Reference</h2>
+            <p style="margin-bottom: var(--akeso-space-lg); color: var(--akeso-gray-600);">
+                All brand assets included in this package:
+            </p>
+
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--akeso-gray-200);">
+                        <th style="text-align: left; padding: var(--akeso-space-sm);">File</th>
+                        <th style="text-align: left; padding: var(--akeso-space-sm);">Description</th>
+                        <th style="text-align: left; padding: var(--akeso-space-sm);">Type</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size: 0.9rem;">
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-brand.css</td>
+                        <td style="padding: var(--akeso-space-sm);">CSS variables and utility classes</td>
+                        <td style="padding: var(--akeso-space-sm);">Stylesheet</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-brand.js</td>
+                        <td style="padding: var(--akeso-space-sm);">JavaScript/ES6 brand tokens</td>
+                        <td style="padding: var(--akeso-space-sm);">Module</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-logo-optimized.svg</td>
+                        <td style="padding: var(--akeso-space-sm);">Primary logo</td>
+                        <td style="padding: var(--akeso-space-sm);">Vector</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-brandmarks-optimized.svg</td>
+                        <td style="padding: var(--akeso-space-sm);">Logo symbol variations</td>
+                        <td style="padding: var(--akeso-space-sm);">Vector</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-logo-variations-optimized.svg</td>
+                        <td style="padding: var(--akeso-space-sm);">Logo layout variations</td>
+                        <td style="padding: var(--akeso-space-sm);">Vector</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-color-palette-optimized.svg</td>
+                        <td style="padding: var(--akeso-space-sm);">Full color palette reference</td>
+                        <td style="padding: var(--akeso-space-sm);">Vector</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--akeso-gray-100);">
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-products-optimized.svg</td>
+                        <td style="padding: var(--akeso-space-sm);">Product line overview</td>
+                        <td style="padding: var(--akeso-space-sm);">Vector</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: var(--akeso-space-sm); font-family: monospace;">akeso-brand-mockups-optimized.svg</td>
+                        <td style="padding: var(--akeso-space-sm);">Brand application examples</td>
+                        <td style="padding: var(--akeso-space-sm);">Vector</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p>Akeso Medical Solutions &copy; 2025</p>
+        <p style="margin-top: var(--akeso-space-xs);">Brand assets vectorized with vtracer</p>
+    </footer>
+</body>
+</html>
