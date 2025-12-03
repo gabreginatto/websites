@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazu Water Solutions - Brand Guidelines</title>
+    <link rel="stylesheet" href="mazu-brand.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--mazu-font-body);
+            background: var(--mazu-gray-50);
+            color: var(--mazu-gray-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--mazu-space-xl);
+        }
+
+        /* Header */
+        header {
+            background: var(--mazu-gradient-rich);
+            color: var(--mazu-white);
+            padding: var(--mazu-space-3xl) var(--mazu-space-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 100' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0 50 Q100 20 200 50 Q300 80 400 50 L400 100 L0 100 Z' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+            background-position: bottom;
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: var(--mazu-font-light);
+            font-style: italic;
+            margin-bottom: var(--mazu-space-sm);
+            letter-spacing: 0.1em;
+            position: relative;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .header-logo {
+            max-width: 200px;
+            margin-bottom: var(--mazu-space-lg);
+            filter: brightness(0) invert(1);
+        }
+
+        /* Sections */
+        .section {
+            background: var(--mazu-white);
+            border-radius: var(--mazu-radius-xl);
+            padding: var(--mazu-space-2xl);
+            margin-bottom: var(--mazu-space-xl);
+            box-shadow: var(--mazu-shadow-md);
+        }
+
+        .section h2 {
+            color: var(--mazu-blue);
+            font-size: 1.5rem;
+            margin-bottom: var(--mazu-space-lg);
+            padding-bottom: var(--mazu-space-sm);
+            border-bottom: 3px solid var(--mazu-cyan);
+        }
+
+        .section h3 {
+            color: var(--mazu-gray-700);
+            font-size: 1.1rem;
+            margin: var(--mazu-space-lg) 0 var(--mazu-space-md);
+        }
+
+        /* Logo Display */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--mazu-space-lg);
+        }
+
+        .logo-box {
+            padding: var(--mazu-space-2xl);
+            border-radius: var(--mazu-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
+
+        .logo-box.light {
+            background: var(--mazu-gray-100);
+        }
+
+        .logo-box.dark {
+            background: var(--mazu-gray-900);
+        }
+
+        .logo-box.gradient {
+            background: var(--mazu-gradient-primary);
+        }
+
+        .logo-box img {
+            max-width: 220px;
+            max-height: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .logo-label {
+            text-align: center;
+            margin-top: var(--mazu-space-sm);
+            font-size: 0.875rem;
+            color: var(--mazu-gray-500);
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--mazu-space-md);
+        }
+
+        .color-card {
+            border-radius: var(--mazu-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--mazu-shadow-sm);
+        }
+
+        .color-swatch {
+            height: 100px;
+        }
+
+        .color-info {
+            padding: var(--mazu-space-md);
+            background: var(--mazu-white);
+        }
+
+        .color-name {
+            font-weight: var(--mazu-font-semibold);
+            color: var(--mazu-gray-800);
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: var(--mazu-gray-500);
+        }
+
+        .color-var {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--mazu-gray-400);
+            margin-top: 4px;
+        }
+
+        /* Gradient Display */
+        .gradient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--mazu-space-md);
+        }
+
+        .gradient-card {
+            height: 100px;
+            border-radius: var(--mazu-radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--mazu-font-medium);
+            box-shadow: var(--mazu-shadow-md);
+        }
+
+        /* Code Block */
+        .code-block {
+            background: var(--mazu-gray-900);
+            color: var(--mazu-gray-100);
+            padding: var(--mazu-space-lg);
+            border-radius: var(--mazu-radius-md);
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.875rem;
+            line-height: 1.8;
+        }
+
+        .code-block .comment {
+            color: var(--mazu-gray-500);
+        }
+
+        .code-block .property {
+            color: var(--mazu-cyan);
+        }
+
+        .code-block .value {
+            color: var(--mazu-teal);
+        }
+
+        /* Button Examples */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--mazu-space-md);
+            margin-top: var(--mazu-space-md);
+        }
+
+        /* Typography Examples */
+        .typography-sample {
+            padding: var(--mazu-space-lg);
+            background: var(--mazu-gray-50);
+            border-radius: var(--mazu-radius-lg);
+            margin-bottom: var(--mazu-space-md);
+        }
+
+        .font-display {
+            font-size: 3rem;
+            font-weight: var(--mazu-font-light);
+            font-style: italic;
+            color: var(--mazu-blue);
+            letter-spacing: 0.05em;
+        }
+
+        .font-heading {
+            font-size: 2rem;
+            font-weight: var(--mazu-font-semibold);
+            color: var(--mazu-gray-800);
+        }
+
+        .font-body {
+            font-size: 1rem;
+            color: var(--mazu-gray-600);
+        }
+
+        /* Asset Grid */
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--mazu-space-lg);
+        }
+
+        .asset-card {
+            background: var(--mazu-gray-50);
+            border-radius: var(--mazu-radius-lg);
+            padding: var(--mazu-space-lg);
+            text-align: center;
+        }
+
+        .asset-card img {
+            max-width: 100%;
+            max-height: 150px;
+            object-fit: contain;
+            margin-bottom: var(--mazu-space-md);
+        }
+
+        .asset-card h4 {
+            color: var(--mazu-gray-700);
+            font-size: 0.95rem;
+            margin-bottom: var(--mazu-space-xs);
+        }
+
+        .asset-card .filename {
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: var(--mazu-gray-400);
+            word-break: break-all;
+        }
+
+        /* Brand Story */
+        .brand-story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--mazu-space-2xl);
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .brand-story {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .brand-story-text {
+            color: var(--mazu-gray-600);
+        }
+
+        .brand-story-text h3 {
+            color: var(--mazu-blue);
+            margin-bottom: var(--mazu-space-md);
+        }
+
+        .brand-story-visual {
+            background: var(--mazu-gradient-rich);
+            border-radius: var(--mazu-radius-2xl);
+            padding: var(--mazu-space-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .brand-story-visual img {
+            max-width: 180px;
+            filter: brightness(0) invert(1);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--mazu-space-md);
+            margin-top: var(--mazu-space-lg);
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .value-card {
+            text-align: center;
+            padding: var(--mazu-space-lg);
+            background: var(--mazu-gray-50);
+            border-radius: var(--mazu-radius-lg);
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: var(--mazu-space-sm);
+        }
+
+        .value-title {
+            font-weight: var(--mazu-font-semibold);
+            color: var(--mazu-gray-800);
+        }
+
+        .value-desc {
+            font-size: 0.85rem;
+            color: var(--mazu-gray-500);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: var(--mazu-space-2xl);
+            color: var(--mazu-gray-500);
+            font-size: 0.875rem;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding: var(--mazu-space-sm);
+            border-bottom: 2px solid var(--mazu-gray-200);
+            color: var(--mazu-gray-700);
+        }
+
+        td {
+            padding: var(--mazu-space-sm);
+            border-bottom: 1px solid var(--mazu-gray-100);
+        }
+
+        td:first-child {
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/BRANCO/branco_horizontal.png" alt="Mazu" class="header-logo">
+        <h1>mazu</h1>
+        <p>Brand Guidelines - Water Measurement Solutions</p>
+    </header>
+
+    <div class="container">
+        <!-- Brand Story Section -->
+        <section class="section">
+            <h2>Brand Story</h2>
+            <div class="brand-story">
+                <div class="brand-story-text">
+                    <h3>The Spirit of Water Protection</h3>
+                    <p style="margin-bottom: var(--mazu-space-md);">
+                        <strong style="color: var(--mazu-teal);">Mazu (媽祖)</strong> is the Chinese goddess of the sea,
+                        revered for centuries as the protector of seafarers, fishermen, and all those whose
+                        lives depend on water.
+                    </p>
+                    <p>
+                        With over 30 years of experience in water measurement and automation,
+                        we carry this protective spirit into modern water resource management,
+                        providing solutions for the sanitation sector with quality, innovation, and excellent cost-benefit.
+                    </p>
+
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🌊</div>
+                            <div class="value-title">Quality</div>
+                            <div class="value-desc">International standards</div>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">💡</div>
+                            <div class="value-title">Innovation</div>
+                            <div class="value-desc">Modern solutions</div>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon">🌱</div>
+                            <div class="value-title">Sustainability</div>
+                            <div class="value-desc">Future-focused</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-story-visual">
+                    <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/BRANCO/branco_vertical.png" alt="Mazu Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Section -->
+        <section class="section">
+            <h2>Logo</h2>
+            <p style="margin-bottom: var(--mazu-space-lg); color: var(--mazu-gray-600);">
+                The Mazu logo features a distinctive water droplet within stylized waves, representing our connection to water management.
+                Ensure adequate clear space around the logo in all applications.
+            </p>
+
+            <h3>Primary Logo - Gradient</h3>
+            <div class="logo-showcase">
+                <div>
+                    <div class="logo-box light">
+                        <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/AZUL (GRADIENTE)/gradiente_horizontal.png" alt="Mazu Logo Horizontal">
+                    </div>
+                    <p class="logo-label">Horizontal - Light background</p>
+                </div>
+                <div>
+                    <div class="logo-box dark">
+                        <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/BRANCO/branco_horizontal.png" alt="Mazu Logo White">
+                    </div>
+                    <p class="logo-label">White version - Dark background</p>
+                </div>
+            </div>
+
+            <h3>Logo Variations</h3>
+            <div class="logo-showcase" style="margin-top: var(--mazu-space-md);">
+                <div>
+                    <div class="logo-box light">
+                        <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/AZUL (GRADIENTE)/gradiente_vertical.png" alt="Vertical">
+                    </div>
+                    <p class="logo-label">Vertical</p>
+                </div>
+                <div>
+                    <div class="logo-box light">
+                        <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/AZUL (GRADIENTE)/símbolo_símbolo1.png" alt="Symbol">
+                    </div>
+                    <p class="logo-label">Symbol Only</p>
+                </div>
+                <div>
+                    <div class="logo-box light">
+                        <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/AZUL (GRADIENTE)/gradiente_shape.png" alt="Shape">
+                    </div>
+                    <p class="logo-label">Shape Mark</p>
+                </div>
+            </div>
+
+            <h3>Color Versions</h3>
+            <div class="asset-grid" style="margin-top: var(--mazu-space-md);">
+                <div class="asset-card">
+                    <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/PRETO /preto_horizontal.png" alt="Black">
+                    <h4>Black Version</h4>
+                    <span class="filename">preto_horizontal.png</span>
+                </div>
+                <div class="asset-card">
+                    <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/VERDE/verde_horizontal.png" alt="Green">
+                    <h4>Green Version</h4>
+                    <span class="filename">verde_horizontal.png</span>
+                </div>
+                <div class="asset-card" style="background: var(--mazu-gray-800);">
+                    <img src="MAZU - ID. VISUAL/LOGOTIPO/PNG/BRANCO/branco_horizontal.png" alt="White">
+                    <h4 style="color: var(--mazu-white);">White Version</h4>
+                    <span class="filename" style="color: var(--mazu-gray-400);">branco_horizontal.png</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Colors Section -->
+        <section class="section">
+            <h2>Color Palette</h2>
+            <p style="margin-bottom: var(--mazu-space-lg); color: var(--mazu-gray-600);">
+                Our brand colors reflect the fluidity and purity of water, from vibrant cyan to deep ocean blue.
+            </p>
+
+            <h3>Primary Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-cyan);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Cyan</div>
+                        <div class="color-hex">#3DE8D4</div>
+                        <div class="color-var">--mazu-cyan</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-teal);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Teal</div>
+                        <div class="color-hex">#2DD4BF</div>
+                        <div class="color-var">--mazu-teal</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-blue);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mazu Blue</div>
+                        <div class="color-hex">#0081BC</div>
+                        <div class="color-var">--mazu-blue</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-deep-blue);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Blue</div>
+                        <div class="color-hex">#0369A1</div>
+                        <div class="color-var">--mazu-deep-blue</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-forest);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Forest</div>
+                        <div class="color-hex">#006859</div>
+                        <div class="color-var">--mazu-forest</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Neutral Colors</h3>
+            <div class="color-grid" style="margin-top: var(--mazu-space-md);">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-white); border: 1px solid var(--mazu-gray-200);"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-hex">#FFFFFF</div>
+                        <div class="color-var">--mazu-white</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-silver);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Silver</div>
+                        <div class="color-hex">#DADAD8</div>
+                        <div class="color-var">--mazu-silver</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: var(--mazu-black);"></div>
+                    <div class="color-info">
+                        <div class="color-name">Raisin Black</div>
+                        <div class="color-hex">#222222</div>
+                        <div class="color-var">--mazu-black</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Brand Gradients</h3>
+            <div class="gradient-grid" style="margin-top: var(--mazu-space-md);">
+                <div class="gradient-card" style="background: var(--mazu-gradient-primary);">
+                    Primary Gradient
+                </div>
+                <div class="gradient-card" style="background: var(--mazu-gradient-rich);">
+                    Rich Gradient
+                </div>
+                <div class="gradient-card" style="background: var(--mazu-gradient-vertical);">
+                    Vertical Flow
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="section">
+            <h2>Typography</h2>
+            <p style="margin-bottom: var(--mazu-space-lg); color: var(--mazu-gray-600);">
+                Clean, modern typography that flows like water.
+            </p>
+
+            <h3>Primary Font - Ramus Sans</h3>
+            <p style="margin-bottom: var(--mazu-space-md); color: var(--mazu-gray-500);">Used for logos, headlines, and display text.</p>
+            <div class="typography-sample">
+                <p class="font-display">mazu</p>
+                <p class="font-heading" style="margin-top: var(--mazu-space-md);">Water Innovation Solutions</p>
+            </div>
+
+            <h3>Secondary Font - Helixa Sans</h3>
+            <p style="margin-bottom: var(--mazu-space-md); color: var(--mazu-gray-500);">Used for body text, subtitles, and UI elements.</p>
+            <div class="typography-sample">
+                <p class="font-body">
+                    Com mais de 30 anos de experiência no comércio exterior,
+                    fornecemos soluções de medição e automação para o setor de saneamento.
+                    Conectamos empresas a tecnologias inovadoras, garantindo qualidade,
+                    eficiência e ótimo custo-benefício.
+                </p>
+            </div>
+        </section>
+
+        <!-- Usage Section -->
+        <section class="section">
+            <h2>Usage</h2>
+
+            <h3>CSS Variables</h3>
+            <p style="margin-bottom: var(--mazu-space-md); color: var(--mazu-gray-600);">
+                Include <code>mazu-brand.css</code> in your project to access all brand variables:
+            </p>
+            <pre class="code-block"><span class="comment">/* Link the stylesheet */</span>
+&lt;link rel="stylesheet" href="mazu-brand.css"&gt;
+
+<span class="comment">/* Use variables in your CSS */</span>
+.my-button {
+    <span class="property">background</span>: <span class="value">var(--mazu-gradient-primary)</span>;
+    <span class="property">color</span>: <span class="value">var(--mazu-white)</span>;
+    <span class="property">border-radius</span>: <span class="value">var(--mazu-radius-lg)</span>;
+    <span class="property">padding</span>: <span class="value">var(--mazu-space-sm) var(--mazu-space-lg)</span>;
+}</pre>
+
+            <h3>JavaScript / React</h3>
+            <p style="margin-bottom: var(--mazu-space-md); color: var(--mazu-gray-600);">
+                Import brand tokens from <code>mazu-brand.js</code>:
+            </p>
+            <pre class="code-block"><span class="comment">// Import brand tokens</span>
+import { colors, gradients, assets } from './mazu-brand.js'
+
+<span class="comment">// Use in your components</span>
+const Header = () =&gt; (
+    &lt;header style={{ background: <span class="value">gradients.primary</span> }}&gt;
+        &lt;img src={<span class="value">assets.logos.gradient.horizontal</span>} alt="Mazu" /&gt;
+    &lt;/header&gt;
+)</pre>
+
+            <h3>Button Examples</h3>
+            <p style="margin-bottom: var(--mazu-space-md); color: var(--mazu-gray-600);">
+                Pre-built button classes using brand colors:
+            </p>
+            <div class="button-grid">
+                <button class="mazu-btn mazu-btn-primary">Primary Button</button>
+                <button class="mazu-btn mazu-btn-secondary">Secondary Button</button>
+                <button class="mazu-btn mazu-btn-outline">Outline Button</button>
+            </div>
+        </section>
+
+        <!-- Files Section -->
+        <section class="section">
+            <h2>File Reference</h2>
+            <p style="margin-bottom: var(--mazu-space-lg); color: var(--mazu-gray-600);">
+                All brand assets included in this package:
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>File</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>mazu-brand.css</td>
+                        <td>CSS variables and utility classes</td>
+                        <td>Stylesheet</td>
+                    </tr>
+                    <tr>
+                        <td>mazu-brand.js</td>
+                        <td>JavaScript/ES6 brand tokens</td>
+                        <td>Module</td>
+                    </tr>
+                    <tr>
+                        <td>mazu.jsx</td>
+                        <td>React component for brand guidelines</td>
+                        <td>Component</td>
+                    </tr>
+                    <tr>
+                        <td>LOGOTIPO/PNG/AZUL (GRADIENTE)/</td>
+                        <td>Primary gradient logos</td>
+                        <td>PNG</td>
+                    </tr>
+                    <tr>
+                        <td>LOGOTIPO/PNG/BRANCO/</td>
+                        <td>White logo versions</td>
+                        <td>PNG</td>
+                    </tr>
+                    <tr>
+                        <td>LOGOTIPO/PNG/PRETO/</td>
+                        <td>Black logo versions</td>
+                        <td>PNG</td>
+                    </tr>
+                    <tr>
+                        <td>LOGOTIPO/PNG/VERDE/</td>
+                        <td>Green logo versions</td>
+                        <td>PNG</td>
+                    </tr>
+                    <tr>
+                        <td>TIPOGRAFIA/Helixa Sans/</td>
+                        <td>Helixa Sans font family (web fonts)</td>
+                        <td>Fonts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p>Mazu Water Solutions &copy; 2025</p>
+        <p style="margin-top: var(--mazu-space-xs);">www.mazu.eco.br | contato@mazu.eco.br</p>
+    </footer>
+</body>
+</html>
